@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>초등 6학년 디지털 시민 퀴즈 | 안전하고 슬기로운 인터넷 세상</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Google Fonts: Noto Sans KR & Jua -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    .font-jua {
+      font-family: 'Jua', cursive, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-50 via-sky-50 to-purple-50 min-h-screen text-slate-800 flex flex-col justify-between selection:bg-indigo-100 selection:text-indigo-800">
+
+  <!-- 상단 네비게이션 헤더 -->
+  <header class="bg-white/80 backdrop-blur-md border-b border-indigo-100/80 sticky top-0 z-30 shadow-xs">
+    <div class="max-w-3xl mx-auto px-4 py-3 sm:py-3.5 flex items-center justify-between">
+      <div class="flex items-center space-x-2.5">
+        <span class="text-2xl sm:text-3xl">🛡️</span>
+        <div>
+          <h1 class="text-base sm:text-lg font-extrabold text-indigo-950 font-jua tracking-wide flex items-center gap-1.5">
+            초등 6학년 디지털 시민 퀴즈
+          </h1>
+          <p class="text-xs text-indigo-600 font-medium hidden sm:block">슬기롭고 안전한 사이버 세상 탐험하기</p>
+        </div>
+      </div>
+      <div class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span>
+        개인정보 안심 100%
+      </div>
+    </div>
+  </header>
+
+  <!-- 메인 컨텐츠 영역 -->
+  <main class="max-w-3xl w-full mx-auto px-4 py-6 sm:py-8 flex-1 flex flex-col justify-center">
+
+    <!-- 1. 시작 화면 (Start Screen) -->
+    <section id="start-screen" class="space-y-6">
+      <!-- 환영 히어로 카드 -->
+      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl shadow-indigo-100/60 border border-indigo-100 text-center relative overflow-hidden">
+        <!-- 배경 장식 -->
+        <div class="absolute -top-12 -right-12 w-36 h-36 bg-indigo-100/60 rounded-full blur-2xl pointer-events-none"></div>
+        <div class="absolute -bottom-12 -left-12 w-36 h-36 bg-pink-100/60 rounded-full blur-2xl pointer-events-none"></div>
+
+        <div class="inline-block p-3.5 bg-indigo-50 rounded-2xl mb-3 shadow-inner">
+          <span class="text-4xl sm:text-5xl">🌟</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold font-jua text-indigo-950 mb-2">
+          디지털 시민 탐험대 출동!
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 max-w-lg mx-auto leading-relaxed">
+          인터넷과 스마트폰을 사용할 때 알아야 할 <strong>5가지 핵심 수칙</strong>을 퀴즈로 풀고 멋진 디지털 시민 칭호를 획득해 보세요!
+        </p>
+
+        <!-- 5대 퀴즈 영역 뱃지 리스트 -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-5 text-left text-xs sm:text-sm">
+          <div class="bg-blue-50/80 border border-blue-200/80 p-2.5 rounded-xl flex items-center space-x-2">
+            <span class="text-base">🔒</span>
+            <span class="font-semibold text-blue-900">개인정보·비밀번호</span>
+          </div>
+          <div class="bg-purple-50/80 border border-purple-200/80 p-2.5 rounded-xl flex items-center space-x-2">
+            <span class="text-base">🤖</span>
+            <span class="font-semibold text-purple-900">딥페이크·가짜뉴스</span>
+          </div>
+          <div class="bg-rose-50/80 border border-rose-200/80 p-2.5 rounded-xl flex items-center space-x-2">
+            <span class="text-base">🛡️</span>
+            <span class="font-semibold text-rose-900">사이버 폭력 예방</span>
+          </div>
+          <div class="bg-amber-50/80 border border-amber-200/80 p-2.5 rounded-xl flex items-center space-x-2">
+            <span class="text-base">©️</span>
+            <span class="font-semibold text-amber-900">저작권 보호·올바른 인용</span>
+          </div>
+          <div class="bg-emerald-50/80 border border-emerald-200/80 p-2.5 rounded-xl flex items-center space-x-2 col-span-2 sm:col-span-1">
+            <span class="text-base">🌿</span>
+            <span class="font-semibold text-emerald-900">디지털 웰빙·과의존 예방</span>
+          </div>
+        </div>
+
+        <!-- 안내 사항 리스트 -->
+        <div class="mt-5 bg-slate-50 border border-slate-200/80 rounded-2xl p-4 text-xs sm:text-sm text-slate-600 text-left space-y-1.5">
+          <div class="flex items-center space-x-2 font-bold text-slate-800">
+            <span>📋</span>
+            <span>퀴즈 진행 안내</span>
+          </div>
+          <p>• 총 <strong>10문제</strong> (4지선다형, 문항당 10점, 100점 만점)</p>
+          <p>• 10문제를 모두 풀면 <strong>나의 점수와 문제별 정답 & 친절한 해설</strong>이 바로 나옵니다.</p>
+          <p>• 이름이나 전화번호 등 <strong>개인 식별 정보는 전혀 수집하지 않으니 안심</strong>하세요!</p>
+        </div>
+
+        <!-- 학생 반/번호 입력 (선택사항) -->
+        <div class="mt-6 pt-5 border-t border-slate-100">
+          <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">
+            내 소속 선택 <span class="text-slate-400 font-normal">(선택 안 할 시 '무기명'으로 기록됩니다)</span>
+          </label>
+          <div class="flex items-center justify-center gap-3 max-w-xs mx-auto">
+            <div class="flex-1">
+              <span class="inline-block w-full py-2.5 px-3 bg-indigo-50 border border-indigo-200 rounded-xl text-center font-bold text-indigo-900 text-sm">
+                6학년
+              </span>
+            </div>
+            <div class="flex-1">
+              <select id="class-select" class="w-full py-2.5 px-3 bg-white border border-slate-300 rounded-xl text-sm font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <option value="">반 선택</option>
+              </select>
+            </div>
+            <div class="flex-1">
+              <select id="number-select" class="w-full py-2.5 px-3 bg-white border border-slate-300 rounded-xl text-sm font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <option value="">번호 선택</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- 시작 버튼 -->
+        <div class="mt-6">
+          <button id="start-btn" type="button" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white font-jua text-lg sm:text-xl rounded-2xl shadow-lg shadow-indigo-500/30 transition transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center mx-auto space-x-2">
+            <span>퀴즈 시작하기</span>
+            <span class="text-xl">🚀</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. 퀴즈 화면 (Quiz Screen) -->
+    <section id="quiz-screen" class="hidden space-y-4">
+      <!-- 진행 상황 및 헤더 바 -->
+      <div class="bg-white/90 backdrop-blur-md rounded-2xl p-4 shadow-sm border border-indigo-100 flex flex-col gap-2.5">
+        <div class="flex items-center justify-between text-xs sm:text-sm">
+          <div class="flex items-center space-x-2">
+            <span id="topic-badge" class="px-2.5 py-0.5 rounded-full font-bold text-xs bg-indigo-100 text-indigo-700 border border-indigo-200">
+              주제
+            </span>
+            <span class="font-bold text-slate-700">진행률: <span id="progress-text" class="text-indigo-600 font-extrabold">1 / 10</span></span>
+          </div>
+          <div id="timer-display" class="font-mono font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-lg border border-indigo-100 text-xs sm:text-sm">
+            ⏱️ 00:00
+          </div>
+        </div>
+
+        <!-- 프로그레스 바 -->
+        <div class="w-full bg-slate-100 rounded-full h-3 overflow-hidden p-0.5">
+          <div id="progress-bar" class="bg-gradient-to-r from-indigo-500 to-violet-500 h-full rounded-full transition-all duration-300 w-1/10"></div>
+        </div>
+      </div>
+
+      <!-- 문제 카드 -->
+      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl shadow-indigo-100/60 border border-indigo-100 space-y-6">
+        <!-- 문제 제목 -->
+        <div>
+          <h3 id="question-title" class="text-lg sm:text-xl font-bold text-slate-900 leading-snug">
+            문제 불러오는 중...
+          </h3>
+        </div>
+
+        <!-- 4지선다 보기 목록 컨테이너 -->
+        <div id="options-container" class="space-y-3">
+          <!-- submit.js에서 동적 생성 -->
+        </div>
+
+        <!-- 하단 네비게이션 버튼 -->
+        <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+          <button id="prev-btn" type="button" class="invisible px-5 py-3 border border-slate-300 hover:bg-slate-100 text-slate-700 rounded-xl font-bold text-sm sm:text-base transition flex items-center space-x-1">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+            <span>이전 문제</span>
+          </button>
+
+          <button id="next-btn" type="button" class="px-6 py-3.5 bg-gradient-to-r from-indigo-600 to-violet-600 text-white rounded-xl font-bold shadow-lg shadow-indigo-500/25 hover:from-indigo-700 hover:to-violet-700 transition flex items-center justify-center space-x-2 text-sm sm:text-base">
+            <span>다음 문제</span>
+            <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 결과 화면 (Result Screen) -->
+    <section id="result-screen" class="hidden space-y-6">
+      <!-- 종합 결과 카드 -->
+      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl shadow-indigo-100/60 border border-indigo-100 text-center relative overflow-hidden">
+        <!-- 배경 장식 -->
+        <div class="absolute -top-10 -right-10 w-40 h-40 bg-amber-100/50 rounded-full blur-2xl pointer-events-none"></div>
+
+        <div id="result-icon" class="text-5xl sm:text-6xl mb-2 animate-bounce">
+          🏆
+        </div>
+        
+        <span id="result-student-tag" class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-600 mb-2">
+          6학년 탐험가
+        </span>
+
+        <h3 id="result-badge-title" class="text-2xl sm:text-3xl font-jua font-bold text-indigo-950 mb-1">
+          최고의 마스터 디지털 시민!
+        </h3>
+        <p id="result-badge-desc" class="text-xs sm:text-sm text-slate-600 max-w-md mx-auto mb-6">
+          완벽해요! 디지털 세상의 모든 위험을 슬기롭게 헤쳐 나갈 준비가 되었습니다!
+        </p>
+
+        <!-- 점수 및 통계 카드 3개 -->
+        <div class="grid grid-cols-3 gap-2.5 sm:gap-4 max-w-md mx-auto mb-5">
+          <div class="bg-indigo-50/80 border border-indigo-100 rounded-2xl p-3 sm:p-4 text-center">
+            <span class="block text-xs font-semibold text-indigo-600 mb-1">나의 점수</span>
+            <span class="font-jua text-2xl sm:text-3xl text-indigo-900"><span id="result-score">100</span><span class="text-sm font-normal text-indigo-700">점</span></span>
+          </div>
+          <div class="bg-emerald-50/80 border border-emerald-100 rounded-2xl p-3 sm:p-4 text-center">
+            <span class="block text-xs font-semibold text-emerald-600 mb-1">맞힌 개수</span>
+            <span id="result-correct-count" class="font-jua text-2xl sm:text-3xl text-emerald-900">10 / 10</span>
+          </div>
+          <div class="bg-purple-50/80 border border-purple-100 rounded-2xl p-3 sm:p-4 text-center">
+            <span class="block text-xs font-semibold text-purple-600 mb-1">소요 시간</span>
+            <span id="result-time" class="font-jua text-base sm:text-lg text-purple-900 pt-1 block">01:30</span>
+          </div>
+        </div>
+
+        <!-- 구글 시트 전송 상태 알림 영역 -->
+        <div id="sheet-status" class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-600 text-xs sm:text-sm flex items-center space-x-2 text-left">
+          <span class="text-base">⏳</span>
+          <span>제출 데이터를 준비하고 있습니다...</span>
+        </div>
+
+        <!-- 다시 풀기 버튼 -->
+        <div class="mt-6 flex justify-center">
+          <button id="retry-btn" type="button" class="px-6 py-3 bg-slate-800 hover:bg-slate-900 text-white rounded-xl font-bold text-sm sm:text-base transition shadow-md flex items-center space-x-2">
+            <span>다시 도전하기</span>
+            <span>🔄</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 문제별 정답 및 해설 (오답노트) -->
+      <div class="space-y-3">
+        <div class="flex items-center justify-between px-2">
+          <h4 class="font-jua text-lg sm:text-xl text-slate-900 flex items-center space-x-2">
+            <span>📖</span>
+            <span>문제별 정답 및 선생님 해설</span>
+          </h4>
+          <span class="text-xs text-slate-500">10문항 전체 풀이</span>
+        </div>
+
+        <!-- 카드 목록 -->
+        <div id="review-list-container" class="space-y-3.5">
+          <!-- submit.js에서 10문제의 정답/오답/해설 카드가 동적으로 채워집니다 -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 하단 푸터 -->
+  <footer class="bg-white/80 border-t border-slate-200/60 py-4 text-center text-xs text-slate-500">
+    <div class="max-w-3xl mx-auto px-4">
+      <p class="font-medium">초등학교 6학년 디지털 시민교육 퀴즈 플랫폼</p>
+      <p class="text-[11px] text-slate-400 mt-0.5">개인정보 수집 없이 익명으로 안전하게 참여할 수 있습니다.</p>
+    </div>
+  </footer>
+
+  <!-- 자바스크립트 파일 로드 (순서 중요: 1. questions.js, 2. submit.js) -->
+  <script src="questions.js"></script>
+  <script src="submit.js"></script>
+</body>
+</html>
